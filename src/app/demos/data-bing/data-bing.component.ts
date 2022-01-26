@@ -13,5 +13,6 @@ export class DataBingComponent implements OnInit {
   }
 
  public contadorClique: number = 1;
+ public minhaImagem: String = "https://angular.io/assets/images/logos/angular/logo-nav@2x.png";
 
 }
