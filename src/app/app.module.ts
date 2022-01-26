@@ -10,7 +10,6 @@ import { ContatoComponent } from './institucional/contato/contato.component';
 import { RouterModule } from '@angular/router';
 import { rootRouterConfig } from './app.routes';
 import { APP_BASE_HREF } from '@angular/common';
-import { DataBingComponent } from './demos/data-bing/data-bing.component';
 
 @NgModule({
   declarations: [
@@ -20,14 +19,13 @@ import { DataBingComponent } from './demos/data-bing/data-bing.component';
     HomeComponent,
     SobreComponent,
     ContatoComponent,
-    DataBingComponent,
   ],
   imports: [
     BrowserModule,
     [RouterModule.forRoot(rootRouterConfig, { useHash: false })]
   ],
   providers: [{
-    provide:APP_BASE_HREF,useValue:'/'
+    provide:APP_BASE_HREF,useValue:'/'//
   }],
   bootstrap: [AppComponent]
 })

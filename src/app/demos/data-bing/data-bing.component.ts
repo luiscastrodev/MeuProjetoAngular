@@ -12,4 +12,6 @@ export class DataBingComponent implements OnInit {
   ngOnInit(): void {
   }
 
+ public contadorClique: number = 1;
+
 }
