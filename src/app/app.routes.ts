@@ -6,7 +6,7 @@ import { ContatoComponent } from './institucional/contato/contato.component';
 import { DataBingComponent } from './demos/data-bing/data-bing.component';
 //import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.component';
 
-export const rootRouterConfig: Routes = [
+ const rootRouterConfig: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full'},
     { path: 'home', component: HomeComponent},
     { path: 'contato', component: ContatoComponent},
@@ -18,3 +18,15 @@ export const rootRouterConfig: Routes = [
     //        loadChildren: () => import('./demos/arquitetura-componentes/produto.module')
     //        .then(m => m.ProdutoModule)}
 ];
+
+
+@NgModule({
+    imports:[
+        RouterModule.forRoot(rootRouterConfig)
+    ],
+    exports:[
+        RouterModule
+    ]
+})
+
+export class AppRoutingModule{}
