@@ -14,9 +14,9 @@ import { DataBingComponent } from './demos/data-bing/data-bing.component';
     { path: 'feature-data-binding', component: DataBingComponent },
 
     //{ path: 'cadastro', component: CadastroComponent },
-    //{ path: 'produtos', 
-    //        loadChildren: () => import('./demos/arquitetura-componentes/produto.module')
-    //        .then(m => m.ProdutoModule)}
+    { path: 'produtos', 
+            loadChildren: () => import('./demos/arquitetura-componente/produto.module')
+            .then(m => m.ProdutoModule)}
 ];
 
 
