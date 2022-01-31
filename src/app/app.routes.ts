@@ -15,7 +15,7 @@ import { DataBingComponent } from './demos/data-bing/data-bing.component';
 
     //{ path: 'cadastro', component: CadastroComponent },
     { path: 'produtos', 
-            loadChildren: () => import('./demos/arquitetura-componente/produto.module')
+            loadChildren: () => import('./demos/arquitetura-componente/produto.module')//carregando module lazy loading
             .then(m => m.ProdutoModule)}
 ];
 

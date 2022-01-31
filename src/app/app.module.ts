@@ -19,7 +19,6 @@ import { ProdutoModule } from './demos/arquitetura-componente/produto.module';
     NavegacaoModule,
     InstitucionalModule,
     AppRoutingModule,
-    ProdutoModule
   ],
   providers: [{
     provide:APP_BASE_HREF,useValue:'/'//
