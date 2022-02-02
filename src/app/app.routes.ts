@@ -27,7 +27,7 @@ import { DataBingComponent } from './demos/data-bing/data-bing.component';
 
 @NgModule({
     imports:[
-        RouterModule.forRoot(rootRouterConfig)
+        RouterModule.forRoot(rootRouterConfig,{enableTracing:true})//enableTracing saber por onde esta passando as rotas log no console
     ],
     exports:[
         RouterModule
