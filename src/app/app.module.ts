@@ -1,31 +1,40 @@
-import { InstitucionalModule } from './institucional/institucional.module';
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
+
+import { NgBrazil } from 'ng-brazil'
+import { TextMask } from 'ng-brazil';
+import { CustomFormsModule } from 'ng2-validation'
 
 import { AppComponent } from './app.component';
-import { APP_BASE_HREF, CommonModule } from '@angular/common';
-import {FormsModule} from "@angular/forms";
+import { SobreComponent } from './institucional/sobre/sobre.component';
+import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.component';
 import { NavegacaoModule } from './navegacao/navegacao.module';
+
 import { AppRoutingModule } from './app.routes';
-import { ProdutoModule } from './demos/arquitetura-componente/produto.module';
-import { RouterModule } from '@angular/router';
+import { AuthGuard } from './services/app.guard';
+import { CadastroGuard } from './services/cadastro.guard';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SobreComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,  
+    FormsModule,
+    ReactiveFormsModule,
     NavegacaoModule,
-    InstitucionalModule,
+    TextMask.TextMaskModule,
+    NgBrazil,
+    CustomFormsModule,
     AppRoutingModule
   ],
   providers: [
-    //{
-    //provide:APP_BASE_HREF,useValue:'/'//
-    //}
-],
+    AuthGuard,
+    CadastroGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

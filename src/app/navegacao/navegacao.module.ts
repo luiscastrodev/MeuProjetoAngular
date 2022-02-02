@@ -1,18 +1,20 @@
 import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
 import { MenuComponent } from './menu/menu.component';
-import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { RouterModule } from "@angular/router";
-import { NotfoundComponent } from './notfound/notfound.component';
+import { FooterComponent } from './footer/footer.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
-    declarations:[
+    declarations: [
         MenuComponent,
-        FooterComponent,
         HomeComponent,
-        NotfoundComponent],
-    imports:[
+        FooterComponent,
+        NotFoundComponent
+    ],
+    imports: [
         CommonModule,
         RouterModule
     ],
@@ -20,9 +22,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
         MenuComponent,
         HomeComponent,
         FooterComponent,
-        NotfoundComponent
+        NotFoundComponent
     ]
 })
-export class NavegacaoModule{
-
-}
+export class NavegacaoModule{}

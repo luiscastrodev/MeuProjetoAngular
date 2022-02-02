@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  templateUrl: './menu.component.html'
 })
 export class MenuComponent {
+
   nav: Nav[] = [
     {
       link: '/home',
@@ -14,29 +14,38 @@ export class MenuComponent {
       admin: false
     },
     {
-      link: '/contato',
-      name: 'contato',
+      link: '/cadastro',
+      name: 'Cadastro',
       exact: true,
       admin: false
     },
     {
       link: '/sobre',
-      name: 'sobre',
+      name: 'Sobre',
       exact: true,
       admin: false
     },
     {
       link: '/produtos',
-      name: 'produtos',
-      exact: true,
+      name: 'Produtos',
+      exact: false,
+      admin: false
+    },
+    {
+      link: '/admin',
+      name: 'Admin',
+      exact: false,
       admin: false
     }
   ];
+
 }
 
+
+
 interface Nav {
-  link: string;
-  name: string;
-  exact: boolean;
-  admin: boolean;
+  link: string,
+  name: string,
+  exact: boolean,
+  admin: boolean
 }
