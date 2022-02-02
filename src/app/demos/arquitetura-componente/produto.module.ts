@@ -1,3 +1,4 @@
+import { ProdutoService } from './services/produto.service';
 import { ProdutoAppcomponent } from './produto.app.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -29,6 +30,9 @@ import { RouterModule } from '@angular/router';
       ProdutoRoutingModule,
       RouterModule
 
+  ],
+  providers:[
+    ProdutoService
   ],
   exports: []
 })
