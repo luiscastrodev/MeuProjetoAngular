@@ -1,3 +1,4 @@
+import { NotfoundComponent } from './navegacao/notfound/notfound.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './navegacao/home/home.component';
@@ -16,7 +17,11 @@ import { DataBingComponent } from './demos/data-bing/data-bing.component';
     //{ path: 'cadastro', component: CadastroComponent },
     { path: 'produtos', 
             loadChildren: () => import('./demos/arquitetura-componente/produto.module')//carregando module lazy loading
-            .then(m => m.ProdutoModule)}
+            .then(m => m.ProdutoModule)},
+
+    //erro 404 redirect
+    {path:'**',component:NotfoundComponent},
+
 ];
 
 
