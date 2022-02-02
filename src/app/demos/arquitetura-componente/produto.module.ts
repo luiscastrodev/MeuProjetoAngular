@@ -1,3 +1,4 @@
+import { ProdutoAppcomponent } from './produto.app.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -11,10 +12,13 @@ import { ProdutoRoutingModule } from './produto.route';
 import { ProdutoDetalheComponent } from './componentes/produto-card-detalhe-component';
 import { ProdutoCountComponent } from './componentes/produto-count-component';
 import { EditarProdutoComponent } from './editar-produto/editar-produto.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
   declarations: [
+      ProdutoAppcomponent,
       ProdutoDashboardComponent,
       ProdutoDetalheComponent,
       ProdutoCountComponent,
@@ -22,7 +26,9 @@ import { EditarProdutoComponent } from './editar-produto/editar-produto.componen
   ],
   imports: [
       CommonModule,
-      ProdutoRoutingModule
+      ProdutoRoutingModule,
+      RouterModule
+
   ],
   exports: []
 })

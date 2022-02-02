@@ -8,6 +8,7 @@ import {FormsModule} from "@angular/forms";
 import { NavegacaoModule } from './navegacao/navegacao.module';
 import { AppRoutingModule } from './app.routes';
 import { ProdutoModule } from './demos/arquitetura-componente/produto.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -18,11 +19,13 @@ import { ProdutoModule } from './demos/arquitetura-componente/produto.module';
     FormsModule,  
     NavegacaoModule,
     InstitucionalModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
-  providers: [{
-    provide:APP_BASE_HREF,useValue:'/'//
-  }],
+  providers: [
+    //{
+    //provide:APP_BASE_HREF,useValue:'/'//
+    //}
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
